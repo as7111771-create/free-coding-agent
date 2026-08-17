@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "free-coding-agent"
+version = "0.1.0"
+description = "Free open-source coding agent (Claude Code style) powered by Hugging Face Inference API"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Akbar Sayyad", email = "as7111771@gmail.com"},
+]
+keywords = [
+    "ai-agent",
+    "coding-agent",
+    "claude-code",
+    "huggingface",
+    "llm",
+    "cli",
+    "code-generation",
+    "autonomous-agent",
+    "free",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+spaces = ["gradio>=4.0"]
+dev = ["pytest>=7.0", "black", "ruff"]
+
+[project.scripts]
+free-agent = "src.agent:main"
+
+[project.urls]
+Homepage = "https://github.com/as7111771-create/free-coding-agent"
+Repository = "https://github.com/as7111771-create/free-coding-agent"
+Issues = "https://github.com/as7111771-create/free-coding-agent/issues"
+Documentation = "https://github.com/as7111771-create/free-coding-agent#readme"
+
+[tool.setuptools.packages.find]
+include = ["src*"]
